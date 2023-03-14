@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/timeUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="Cập nhật lần cuối: 11:20 20/11/2022"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <com.github.lzyzsd.circleprogress.ArcProgress
+        android:id="@+id/Arc_Speed"
+        android:layout_width="200dp"
+        android:layout_height="190dp"
+        android:layout_below="@id/timeUpdate"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="90dp"
+        app:arc_angle="240"
+        app:arc_bottom_text="Tốc độ nước"
+        app:arc_bottom_text_size="20dp"
+        app:arc_finished_color="@color/gray"
+        app:arc_max="30"
+        app:arc_progress="20"
+        app:arc_stroke_width="20dp"
+        app:arc_suffix_text="  lít/phút"
+        app:arc_text_color="@color/dark_blue"
+        app:arc_text_size="50sp"
+        app:arc_unfinished_color="@color/dark_blue" />
+
+    <com.github.lzyzsd.circleprogress.ArcProgress
+        android:id="@+id/Arc_Total"
+        android:layout_width="200dp"
+        android:layout_height="190dp"
+        android:layout_below="@id/Arc_Speed"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="90dp"
+        app:arc_angle="240"
+        app:arc_bottom_text="Tổng số lít"
+        app:arc_bottom_text_size="20dp"
+        app:arc_finished_color="@color/gray"
+        app:arc_max="125"
+        app:arc_progress="20"
+        app:arc_stroke_width="20dp"
+        app:arc_suffix_text="  lít"
+        app:arc_text_color="@color/dark_blue"
+        app:arc_text_size="50sp"
+        app:arc_unfinished_color="@color/dark_blue" />
+
+</RelativeLayout>
